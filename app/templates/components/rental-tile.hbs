@@ -1,0 +1,10 @@
+
+<li>
+  {{rental.owner}}'s {{rental.type}} in {{rental.city}}
+  {{#if isShowingImage}}
+  <!-- the value is showing image comes from the component's JS file i.e rental-type.js -->
+    <p><img src={{rental.image}} alt={{rental.type}} {{action 'imageHide'}}></p>
+  {{else}}
+    <button{{action 'imageShow'}}>Show image</button>
+  {{/if}}
+</li>
