@@ -8,7 +8,15 @@ export default Ember.Component.extend({
     },
     imageHide:function(){
       this.set('isShowingImage', false);
+    },
+
+    delete: function(rental){
+      if (confirm("Are you sure you want to leave?")) {
+        this.sendAction('destroyRental', rental);//NB comma between destroyRental and rental
+      }
     }
   }
+
+
 
 });
